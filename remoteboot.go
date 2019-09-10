@@ -50,10 +50,6 @@ func NewRemoteCommand(rootSettings *environment.AirshipCTLSettings) *cobra.Comma
                                 name = "remote"
                         }
 
-                        getJson(transport+"://"+endpoint+"/redfish/v1/Systems", f2)
-                        p := &hostid
-                        *p = f2.Members[0].OdataID
-                        fmt.Println(hostid)
                         fmt.Println("Hi, please use remoteboot <redfishapi/ansible> subcommands, specify --action flag")
                 },
         }
